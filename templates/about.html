@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="services-container">
+  <h1 class="page-heading hero-title .fade-in-up">About Prime Layer</h1>
+  <p class="page-sub fade-in">Your Home. Our Craft.</p>
+
+  <div class="service-section">
+    <div class="service-card fade-in-up">
+      <h2>Our Story</h2>
+      <p>
+        At Prime Layer Constructions, we don't just build — we craft spaces meant to be lived in.
+        Whether it's a basement makeover or a full renovation, our team delivers precision, quality, and integrity in every detail.
+      </p>
+    </div>
+
+    <div class="service-card fade-in-up">
+      <h2>Why Choose Us?</h2>
+      <ul style="padding-left:0; list-style:none; font-size: larger;">
+        <li> Skilled, Licensed Professionals</li><hr>
+        <li> Custom Solutions for Every Budget</li><hr>
+        <li> Fast Turnaround with Top Quality Results</li>
+      </ul>
+    </div>
+  </div>
+
+
+<div class="service-card testimonial-card fade-in-up">
+  <h2 class="gradient-heading">Client Testimonials</h2>
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <p>"Fantastic basement framing job — clean, precise, and ahead of schedule!"</p>
+        <small>- Mark J.</small>
+      </div>
+      <div class="carousel-item">
+        <p>"Loved the new flooring and finish. Highly recommended!"</p>
+        <small>- Rachel L.</small>
+      </div>
+      <div class="carousel-item">
+        <p>"They turned my dull basement into a studio-quality space."</p>
+        <small>- Chris A.</small>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+
+  <a href="/contact" class="btn btn-primary mt-4 zoom-in">Contact Us</a>
+</div>
+{% endblock %}
