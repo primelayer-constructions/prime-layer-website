@@ -23,7 +23,6 @@ def services():
 @app.route("/gallery")
 def gallery():
     return render_template("gallery.html", body_class="bg-gallery")
-
 @app.route("/about")
 def about():
     return render_template("about.html", body_class="bg-gallery")
