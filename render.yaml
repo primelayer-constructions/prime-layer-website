@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: prime-layer-constructions
+    env: python
+    plan: free
+    branch: master
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: MAIL_USERNAME
+        value: primelayerconstructions@gmail.com
+      - key: MAIL_PASSWORD
+        value: zvvcytguychitzdx
