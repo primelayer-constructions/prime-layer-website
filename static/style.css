@@ -48,7 +48,7 @@ main {
   color: var(--dark-green);
    font-size: clamp(14px, 4vw, 22px);
 }
-font-size: medium;
+
 .nav-link {
   color: var(--charcoal);
   margin-left: 20px;
