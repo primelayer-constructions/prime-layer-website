@@ -87,6 +87,13 @@ main {
   line-height: 1.2;
 }
 
+.hero-title .word {
+  display: inline-block;
+  opacity: 0;
+  animation: revealText 0.5s ease forwards;
+  margin: 0 clamp(5px, 1vw, 18px);
+}
+
 .hero-title span {
   white-space: nowrap;
 }
