@@ -46,7 +46,14 @@ main {
 .navbar-brand {
   font-weight: bold;
   color: var(--dark-green);
-   font-size: clamp(14px, 4vw, 22px);
+  font-size: clamp(16px, 3.2vw, 20px);
+}
+
+@media (max-width: 480px) {
+  .navbar-toggler {
+    padding: 4px 6px;
+    font-size: 1rem;
+  }
 }
 
 .nav-link {
@@ -72,18 +79,23 @@ main {
   color: var(--dark-green);
   font-weight: bold;
   margin-bottom: 20px;
-  font-size: clamp(26px, 6vw, 48px);
+  font-size: clamp(24px, 5vw, 44px);
+  word-break: break-word;
+  text-align: center;
+  line-height: 1.2;
+  padding: 0 10px;
 }
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.2rem;
-  }
-}
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 32px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: 22px;
   }
 }
 
