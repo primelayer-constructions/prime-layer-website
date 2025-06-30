@@ -86,14 +86,6 @@ main {
     font-size: 32px;
   }
 }
-  @media (max-width: 430px) {
- .navbar-brand {
-font-size: medium;
-}
-  .hero-title {
-   font-size: 28px;
-  }
-}
 
 .page-heading {
   background: linear-gradient(45deg, var(--soft-teal), var(--medium-teal));
