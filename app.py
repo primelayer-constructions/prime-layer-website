@@ -52,5 +52,3 @@ def contact():
     
     return render_template("contact.html", body_class="bg-contact")
 
-if __name__ == "__main__":
-    app.run(debug=True)
