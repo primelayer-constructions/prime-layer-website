@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   galleryCards.forEach(card => observer.observe(card));
 });
 
-// Swiper Gallery init
-const swiper = new Swiper(".myGallery", {
+// Swiper Gallery init — myGallery
+const myGallery = new Swiper(".myGallery", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
@@ -35,12 +35,28 @@ const swiper = new Swiper(".myGallery", {
     slideShadows: false,
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".myGallery-pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".myGallery-next",
+    prevEl: ".myGallery-prev",
+  },
+});
+
+// Swiper Vertical Gallery init — verticalGallery
+const verticalGallery = new Swiper(".verticalGallery", {
+  direction: "vertical",
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  pagination: {
+    el: ".verticalGallery-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".verticalGallery-next",
+    prevEl: ".verticalGallery-prev",
   },
 });
 
@@ -59,9 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
-
 // Page Fade-out Transition
 document.querySelectorAll('a[href]').forEach(link => {
   link.addEventListener('click', function(e) {
@@ -74,37 +87,27 @@ document.querySelectorAll('a[href]').forEach(link => {
   });
 });
 
-
-
-
-// logo on page fade - out
-
+// Logo page transition fade
 document.addEventListener("DOMContentLoaded", () => {
   const transitionEl = document.getElementById("page-transition");
 
   setTimeout(() => {
     transitionEl.classList.add("hide");
-  }, 1800); // adjust duration if you want it faster or slower
+  }, 1800);
 
   const links = document.querySelectorAll("a");
 
   for (let link of links) {
     if (link.hostname === window.location.hostname) {
-      link.addEventListener("click", function (e) {
+      link.addEventListener("click", function(e) {
         if (!this.hash && !this.href.includes("mailto:") && !this.href.includes("tel:")) {
           e.preventDefault();
           transitionEl.classList.remove("hide");
-setTimeout(() => {
-  transitionEl.classList.add("hide");
-}, 800);
+          setTimeout(() => {
+            transitionEl.classList.add("hide");
+          }, 800);
         }
       });
     }
   }
 });
-
-
-
-
-
-
